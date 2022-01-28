@@ -14,6 +14,12 @@ app.get("/", function(req, res) {
 var middlewareFunction = express.static(__dirname + "/public");
 app.use("/public", middlewareFunction);
 
+app.get("/json", function(req, res) {
+  res.json({
+    "message": "Hello json"
+  });
+})
+
 
 
 
