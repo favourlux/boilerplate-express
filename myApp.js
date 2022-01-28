@@ -11,6 +11,8 @@ app.get("/", function(req, res) {
   res.sendFile(__dirname + absolutePath);
 })
 
+var middlewareFunction = express.static(__dirname + "/public");
+app.use("/public", middlewareFunction);
 
 
 
